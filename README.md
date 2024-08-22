@@ -5,6 +5,9 @@ This project is a comprehensive data pipeline that extracts, processes, analyzes
 
 ## Project Overview
 
+### Dashboard Front Page
+![Dashboard FrontPage](images/News_Analytics_Dashboard_FrontPage.JPG)
+
 ### Key Features
 - **Data Extraction**: Automated scraping of news articles using a custom Python script integrated with Airflow.
 - **Data Processing**: Cleaning and structuring the data to ensure it is ready for analysis.
@@ -82,10 +85,7 @@ news-analytics-dashboard/
 
 This project was created as a learning opportunity to improve my understanding of Apache Airflow and data engineering, specifically writing DAGs. The primary goal was to build a robust and efficient data pipeline using Airflow DAGs to automate the process of extracting, transforming, loading, and analyzing news articles, while incorporating sentiment analysis to derive insights from text data.
 
-## Screenshots
-
-### Dashboard Front Page
-![Dashboard FrontPage](images/News_Analytics_Dashboard_FrontPage.JPG)
+## More Screenshots
 
 ### Database Page
 ![Database Page](images/Database_page.JPG)
