@@ -20,7 +20,8 @@ news-analytics-dashboard/
 │   ├── news_analytics.py
 │   ├── news.py
 │   ├── sentiment_analysis.py
-│   └── streamlit_app.py
+│   ├──streamlit_app.py
+│   └──about_this_project.txt
 ├── .gitignore
 ├── README.md
 ├── hf_cache/
@@ -32,7 +33,6 @@ news-analytics-dashboard/
 │   ├── Database_page.JPG
 │   ├── dag_image.JPG
 │   └── About_this_project_page.JPG
-└── about_this_project.txt
 ```
 
 ## Prerequisites
