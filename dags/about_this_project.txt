@@ -1,0 +1,33 @@
+This project was created as a learning opportunity to improve my understanding of Apache Airflow and data engineering / writing dags. The primary goal was to build a robust data and efficient data pipeline using Airflow DAGs to automate the process of extracting, transforming, loading, and analyzing news articles, while incorporating sentiment analysis to derive insights from text data.
+
+**Project Structure:**
+1. Data Extraction
+	- Using a python script the DAG scrapes news articles from the convenient NewsAPI. 
+	- The extracted data is stored in a temporary CSV file for further processing 
+
+2. Data Processing
+	- The raw dataframe is then processed into a clean and concise structure that is easier to work with. This task removes duplicates, missing values, etc and allows me to analyze the content of the articles easily and without error.
+
+3. Sentiment Analysis
+	- The processed news articles undergo sentiment analysis using a pretrained RoBERTa transformer model through HuggingFace. This task classifies the sentiment of each article as positive, neutral, or negative.
+
+4. Data Storage
+	- The analyzed data is then stored in a SQLite database which allows for easy access and further analysis.
+
+5. Visualization
+	- Seamlessly integrated with the streamlit package, a web app is made available to view dynamic, interactive graphs which draw conclusions about the data.
+	- Additionally, the database itself is displayed for simple viewing.
+
+**Learning Outcomes**
+
+Through this project, I gained valuable experience in:
+
+	* Apache Airflow: Developing, scheduling, and monitoring DAGs to manage data pipelines.
+
+	* Data Engineering: Automating the extraction, transformation, and loading (ETL) of data from external sources.
+
+	* Sentiment Analysis / NLP : Applying machine learning models to text data for classification tasks.
+
+	* Python Programming: Writing clean, efficient, and Pythonic code that follows industry best practices.
+
+**Note:** Sentiment analysis is limited by NewsAPI which truncates characters of news articles. This likely contributes to a greater number of neutral classifications.
