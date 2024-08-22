@@ -81,3 +81,17 @@ news-analytics-dashboard/
 ## About This Project
 
 This project was created as a learning opportunity to improve my understanding of Apache Airflow and data engineering, specifically writing DAGs. The primary goal was to build a robust and efficient data pipeline using Airflow DAGs to automate the process of extracting, transforming, loading, and analyzing news articles, while incorporating sentiment analysis to derive insights from text data.
+
+## Screenshots
+
+### Dashboard Front Page
+![Dashboard FrontPage](images/News_Analytics_Dashboard_FrontPage.JPG)
+
+### Database Page
+![Database Page](images/Database_page.JPG)
+
+### Airflow DAG
+![Airflow DAG](images/dag_image.JPG)
+
+### About Page
+![About Page](images/About_this_project_page.JPG)
