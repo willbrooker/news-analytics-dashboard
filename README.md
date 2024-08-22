@@ -1,11 +1,11 @@
-# news-analytics-dashboard
+
 # News Analytics Dashboard with Airflow and Streamlit
 
 This project is a comprehensive data pipeline that extracts, processes, analyzes, and visualizes news articles using Apache Airflow and Streamlit. The pipeline includes sentiment analysis using a pre-trained RoBERTa model and provides an interactive dashboard for exploring the results.
 
 ## Project Overview
 
-### Key Features:
+### Key Features
 - **Data Extraction**: Automated scraping of news articles using a custom Python script integrated with Airflow.
 - **Data Processing**: Cleaning and structuring the data to ensure it is ready for analysis.
 - **Sentiment Analysis**: Classifying the sentiment of news articles as positive, neutral, or negative using a pre-trained RoBERTa model.
@@ -13,53 +13,60 @@ This project is a comprehensive data pipeline that extracts, processes, analyzes
 - **Visualization**: Interactive dashboards built with Streamlit to explore sentiment distributions and author analysis.
 
 ## Repository Structure
+
+```
 news-analytics-dashboard/
-├── dags
-  └── news_analytics.py
-  └── news.py
-  └── sentiment_analysis.py
-  └── streamlit_app.py
-  └── about_this_project.txt
+├── dags/
+│   ├── news_analytics.py
+│   ├── news.py
+│   ├── sentiment_analysis.py
+│   └── streamlit_app.py
 ├── .gitignore
 ├── README.md
 ├── hf_cache/
-│ └── (Hugging Face cache)
+│   └── (Hugging Face cache)
 ├── docker-compose.yaml
-├── dockerfile
-├── images (streamlit application running)
-  └── News_Analytics_Dashboard_FrontPage.JPG
-  └── Database_page.JPG
-  └── dag_image.JPG
-  └── About_this_project_page.JPG
+├── Dockerfile
+├── images/
+│   ├── News_Analytics_Dashboard_FrontPage.JPG
+│   ├── Database_page.JPG
+│   ├── dag_image.JPG
+│   └── About_this_project_page.JPG
+└── about_this_project.txt
+```
 
-  ### Prerequisites
+## Prerequisites
+
 - **Docker**: Ensure Docker is installed on your system.
 - **Python**: Python 3.7 or higher is required.
 - **pip**: Python package installer.
 
-- ### Installation
+## Installation
 
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/willbrooker/news-analytics-dashboard.git
    cd news-analytics-dashboard
+   ```
 
-2. **Build docker image:**
+2. **Build Docker image**:
+   Add the following to your `Dockerfile`:
+   ```dockerfile
    FROM apache/airflow:2.9.3
-  RUN pip install torch
-  RUN pip install transformers
-  RUN pip install tensorflow
-  RUN pip install tf-keras
-  RUN pip install matplotlib
+   RUN pip install torch transformers tensorflow tf-keras matplotlib
+   ```
 
-3. **Run Docker Container**
- ```powershell
-  docker-compose up -d
-  Access the Airflow web interface at http://localhost:8080.
+3. **Run Docker Container**:
+   ```bash
+   docker-compose up -d
+   ```
+   Access the Airflow web interface at `http://localhost:8080`.
 
-4. **Run  Streamlit app:**
- ```powershell
+4. **Run Streamlit app**:
+   ```bash
    streamlit run streamlit_app.py
+   ```
+   The Streamlit dashboard will be available at [http://localhost:8501](http://localhost:8501).
 
 ## Usage
 
@@ -74,5 +81,3 @@ news-analytics-dashboard/
 ## About This Project
 
 This project was created as a learning opportunity to improve my understanding of Apache Airflow and data engineering, specifically writing DAGs. The primary goal was to build a robust and efficient data pipeline using Airflow DAGs to automate the process of extracting, transforming, loading, and analyzing news articles, while incorporating sentiment analysis to derive insights from text data.
-
-
