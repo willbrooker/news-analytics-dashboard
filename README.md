@@ -1,5 +1,5 @@
 
-# News Analytics Dashboard with Airflow and Streamlit
+# News Analytics Dashboard with Airflow
 
 This project is a comprehensive data pipeline that extracts, processes, analyzes, and visualizes news articles using Apache Airflow and Streamlit. The pipeline includes sentiment analysis using a pre-trained RoBERTa model and provides an interactive dashboard for exploring the results.
 
